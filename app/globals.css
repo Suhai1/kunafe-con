@@ -1518,7 +1518,7 @@ button { cursor: pointer; font-family: var(--font-body); border: none; backgroun
     align-items: flex-start;
     gap: 0;
     padding: 1rem 0 2rem;
-    transform: translateY(-110%);
+    transform: translateY(-200%);
     transition: transform var(--transition);
     border-bottom: 1px solid rgba(139,115,64,0.2);
     z-index: 99;
