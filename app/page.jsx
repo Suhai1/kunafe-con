@@ -46,7 +46,15 @@ export default function HomePage() {
   // Always call setCart() with a new array. React watches
   // setCart — when you call it, React re-renders everything
   // that uses `cart`.
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(() => {
+  if (typeof window === 'undefined') return [];
+  try {
+    const saved = localStorage.getItem('kunafe-cart');
+    return saved ? JSON.parse(saved) : [];
+  } catch {
+    return [];
+  }
+});
 
   // ── DRAWER STATE ────────────────────────────────────────
   // Vanilla: cartDrawer.classList.add('open')
@@ -132,6 +140,11 @@ export default function HomePage() {
   // These are not state — they are calculated from state.
   // React recalculates them every time the component re-renders.
   // Vanilla equivalent: getTotal() and getTotalQty() functions.
+
+  useEffect(() => {
+  localStorage.setItem('kunafe-cart', JSON.stringify(cart));
+  }, [cart]);
+  
   const totalQty   = cart.reduce((sum, c) => sum + c.qty, 0);
   const totalPrice = cart.reduce((sum, c) => sum + c.price * c.qty, 0);
 
