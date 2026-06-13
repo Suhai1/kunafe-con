@@ -82,7 +82,11 @@ export default function Navbar() {
         <img
         src="/images/logo.png"
         alt="The Kunafe Connoisseur"
-        style={{ height: '52px', width: 'auto', objectFit: 'contain' }}
+        style={{ 
+          height: '52px', 
+          width: 'auto',
+          filter: 'brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(400%) hue-rotate(5deg) brightness(95%)'
+      }}
         />
         </a>
 
