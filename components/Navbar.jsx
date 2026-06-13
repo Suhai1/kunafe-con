@@ -76,12 +76,14 @@ export default function Navbar() {
         {/* Logo — clicking scrolls to top */}
         <a
           href="#hero"
-          className="nav-logo"
-          onClick={(e) => handleNavClick(e, '#hero')}
+        className="nav-logo"
+        onClick={(e) => handleNavClick(e, '#hero')}
         >
-          <span className="logo-the">THE</span>
-          <span className="logo-main">KUNAFE</span>
-          <span className="logo-sub">CONNOISSEUR</span>
+        <img
+        src="/images/logo.png"
+        alt="The Kunafe Connoisseur"
+        style={{ height: '52px', width: 'auto', objectFit: 'contain' }}
+        />
         </a>
 
         {/* Hamburger button — only visible on mobile via CSS */}
