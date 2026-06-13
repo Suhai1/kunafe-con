@@ -1505,11 +1505,12 @@ button { cursor: pointer; font-family: var(--font-body); border: none; backgroun
 
 /* === RESPONSIVE === */
 @media (max-width: 900px) {
-  :root { --nav-h: 72px; }
+  :root { --nav-h: 80px; }
 
   .nav-links {
     position: fixed;
     top: var(--nav-h);
+    z-index: 98;
     left: 0; right: 0;
     background: rgba(20,18,12,0.97);
     backdrop-filter: blur(16px);
