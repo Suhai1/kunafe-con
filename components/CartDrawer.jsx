@@ -120,20 +120,23 @@ export default function CartDrawer({
     window.open(url, '_blank');
 
     // Log to Supabase
-    try {
-      await supabase.from('order_clicks').insert({
-        business_id: 'kunafe-con',
-        business_name: 'The Kunafe Connoisseur',
-        items: cart.map(c => ({
-          name: c.name,
-          qty: c.qty,
-          price: c.price
-        })),
-        total: totalPrice,
-      });
-    } catch (err) {
-      console.error('Analytics error:', err);
-    }
+    
+  if (supabase) {
+  try {
+    await supabase.from('order_clicks').insert({
+      business_id: 'kunafe-con',
+      business_name: 'The Kunafe Connoisseur',
+      items: cart.map(c => ({
+        name: c.name,
+        qty: c.qty,
+        price: c.price
+      })),
+      total: totalPrice,
+    });
+  } catch (err) {
+    console.error('Analytics error:', err);
+  }
+}
 
     // Start the 30-second cooldown.
     // Setting this state will trigger the useEffect above.
