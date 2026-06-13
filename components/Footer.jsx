@@ -76,8 +76,11 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom-bar">
-        <p>Made with ✦ for lovers of fine pastry</p>
-      </div>
+  <p>Made with ✦ for lovers of fine pastry</p>
+  <p style={{ marginTop: '0.5rem', fontSize: '0.7rem', opacity: '0.4', letterSpacing: '0.1em' }}>
+    Powered by <a href="https://bitbite.co.za" style={{ color: 'inherit', textDecoration: 'none' }}>BitBite</a>
+  </p>
+</div>
     </footer>
   );
 }
