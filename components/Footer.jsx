@@ -17,11 +17,13 @@ export default function Footer() {
 
         {/* Column 1 — Brand */}
         <div className="footer-col footer-brand">
-          <div className="footer-logo">
-            <span className="logo-the">THE</span>
-            <span className="logo-main">KUNAFE</span>
-            <span className="logo-sub">CONNOISSEUR</span>
-          </div>
+        <div className="footer-logo">
+        <img
+          src="/images/logo.png"
+          alt="The Kunafe Connoisseur"
+          style={{ height: '80px', width: 'auto', objectFit: 'contain', filter: 'brightness(0) invert(1)' }}
+        />
+        </div>
           <p className="footer-tagline">
             Authentic Middle Eastern desserts, handcrafted with love in
             Port Elizabeth.

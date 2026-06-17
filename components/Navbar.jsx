@@ -75,20 +75,16 @@ export default function Navbar() {
 
         {/* Logo — clicking scrolls to top */}
         <a
-          href="#hero"
-        className="nav-logo"
-        onClick={(e) => handleNavClick(e, '#hero')}
-        >
-        <img
-        src="/images/logo.png"
-        alt="The Kunafe Connoisseur"
-        style={{ 
-          height: '52px', 
-          width: 'auto',
-          filter: 'brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(400%) hue-rotate(5deg) brightness(95%)'
-      }}
-        />
+           href="#hero"
+          className="nav-logo"
+          onClick={(e) => handleNavClick(e, '#hero')}
+          >
+        <span className="logo-the">THE</span>
+        <span className="logo-main">KUNAFE</span>
+        <span className="logo-sub">CONNOISSEUR</span>
+        
         </a>
+        
 
         {/* Hamburger button — only visible on mobile via CSS */}
         <button
