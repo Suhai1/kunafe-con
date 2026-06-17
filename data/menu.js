@@ -65,21 +65,24 @@ export const MENU = {
       img: '/images/baklava-tray.jpg',
       imgAlt: 'Full baklava tray with syrup being poured',
     },
-    {
-      id: 'bak-dozen',
-      name: 'Baklava — 1 Dozen',
-      desc: 'Twelve pieces of our golden, nut-filled baklava. A sweet gift or the perfect addition to your dessert spread.',
-      price: 70,
-      serves: '12 Pieces',
-      badge: 'Popular',
-      badgeClass: 'badge-popular',
-      img: '/images/baklava-dozen.jpg',
-      imgAlt: 'Baklava dozen pieces in delivery boxes',
-    },
+    
+    // Temporarily removed — add back when available
+// {
+//   id:         'bak-dozen',
+//   name:       'Baklava — 1 Dozen',
+//   desc:       'Twelve pieces of our golden, nut-filled baklava. A sweet gift or the perfect addition to your dessert spread.',
+//   price:      70,
+//   serves:     '12 Pieces',
+//   badge:      'Popular',
+//   badgeClass: 'badge-popular',
+//   img:        '/images/baklava-dozen.jpg',
+//   imgAlt:     'Baklava dozen pieces in delivery boxes',
+// },
+    
     {
       id: 'bak-block',
       name: 'Baklava Big Blocks',
-      desc: 'Our generously cut baklava blocks — thick, rich, and indulgent. Available individually. Mix and match your favourites.',
+      desc: 'Our generously cut baklava blocks — thick, rich, and indulgent. Sold in 4\'s.',
       price: 25,
       serves: 'Per Block',
       badge: 'Individual',
